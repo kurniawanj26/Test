@@ -23,22 +23,24 @@ const GettingStarted = ({navigation}) => {
 
     return (
         <View style={styles.container}>
-            <View style={styles.inputContainer}>
+            <View style={styles.contentContainer}>
                 <Icon />
-                <View style={styles.inputView}>
-                    <TextInput
-                        placeholder='User Name'
-                        style={styles.input}
-                        onChangeText={(userName) => setUserName(userName)}
-                    />
-                </View>
-                <View style={styles.inputView}>
-                    <TextInput
-                        style={styles.input}
-                        onChangeText={(password) => setPassword(password)}
-                        secureTextEntry={true}
-                        placeholder='Password'
-                    />
+                <View style={styles.inputContainer}>
+                    <View style={styles.inputView}>
+                        <TextInput
+                            placeholder='User Name'
+                            style={styles.input}
+                            onChangeText={(userName) => setUserName(userName)}
+                        />
+                    </View>
+                    <View style={styles.inputView}>
+                        <TextInput
+                            style={styles.input}
+                            onChangeText={(password) => setPassword(password)}
+                            secureTextEntry={true}
+                            placeholder='Password'
+                        />
+                    </View>
                 </View>
                 <Button title="LOGIN" onPress={login}/>
             </View>
@@ -49,24 +51,24 @@ const GettingStarted = ({navigation}) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginVertical: 100
   },
-  inputContainer: {
+  contentContainer: {
     justifyContent: 'center',
     alignItems: 'center',
     flex:1,
   },
-  text:{
-    fontSize: RFPercentage(4),
-    fontWeight: '800'
+  inputContainer: {
+    marginBottom: 20,
+    marginTop: 30
   },
   input: {
     height: 50,
+    width: '100%',
     flex: 1,
     padding: 10,
-    marginLeft: 20,
+    textAlign: 'left',
+    fontSize: RFPercentage(2),
+    fontWeight: '700'
   },
   inputView: {
     borderColor: 'black',
